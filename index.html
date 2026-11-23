@@ -1,6 +1,36 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#070b13"><link rel="manifest" href="manifest.webmanifest"><title>SOLO RIDER // CYBER HUNTER</title><style>
-:root{--bg:#070b13;--p:#101b2b;--c:#50e6ff;--v:#a78bfa;--g:#67f7bd;--m:#8ca0b8;--l:#20334a}*{box-sizing:border-box}body{margin:0;background:radial-gradient(at 15% 0%,#163453,transparent 40%),var(--bg);color:#eaf5ff;font:15px system-ui}header{padding:14px 5%;border-bottom:1px solid var(--l);color:var(--c);letter-spacing:3px;font-weight:900}main{max-width:1050px;margin:auto;padding:20px}.hero,.card{background:linear-gradient(145deg,#13243a,#0b1220);border:1px solid var(--l);border-radius:15px;padding:18px;margin-bottom:14px}.hero h1{font-size:clamp(30px,6vw,48px);line-height:1;margin:12px 0}.k{color:var(--c);letter-spacing:3px;font-size:11px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.wide{grid-column:1/-1}h2{font-size:15px;color:var(--c);letter-spacing:2px;text-transform:uppercase;margin:0 0 12px}.muted,small{color:var(--m)}.big{font-size:30px;font-weight:900}.row{display:flex;justify-content:space-between;gap:10px;align-items:center}.bar{height:8px;background:#26374b;border-radius:8px;margin:10px 0}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--c),var(--v));width:0}button{background:#102943;border:1px solid #31516b;color:white;padding:9px 12px;border-radius:8px;margin:4px;cursor:pointer}button:disabled{opacity:.4}.quest,.mem{padding:11px 0;border-top:1px solid var(--l)}.status{background:#0a2029;padding:10px;border-radius:8px;color:var(--g);margin:8px 0}.warn{background:#2b2115;color:#ffd19b}input,textarea,select{background:#08111d;color:white;border:1px solid var(--l);padding:10px;border-radius:8px;width:100%;margin:5px 0 10px}textarea{min-height:80px}#map{height:240px;background:#101d2d;border:1px solid var(--l);border-radius:10px;overflow:hidden}#map iframe{width:100%;height:100%;border:0}img{max-width:100%;max-height:170px;border-radius:8px}@media(max-width:680px){.grid{grid-template-columns:1fr}.wide{grid-column:auto}}
-</style></head><body><header>SOLO RIDER // CYBER HUNTER v2.0</header><main>
+:root{--bg:#070b13;--p:#101b2b;--c:#50e6ff;--v:#a78bfa;--g:#67f7bd;--m:#8ca0b8;--l:#20334a}*{box-sizing:border-box}body{margin:0;background:radial-gradient(at 15% 0%,#163453,transparent 40%),var(--bg);color:#eaf5ff;font:15px system-ui}header{padding:14px 5%;border-bottom:1px solid var(--l);color:var(--c);letter-spacing:3px;font-weight:900}main{max-width:1050px;margin:auto;padding:20px}.hero,.card{background:linear-gradient(145deg,#13243a,#0b1220);border:1px solid var(--l);border-radius:15px;padding:18px;margin-bottom:14px}.hero h1{font-size:clamp(30px,6vw,48px);line-height:1;margin:12px 0}.k{color:var(--c);letter-spacing:3px;font-size:11px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.wide{grid-column:1/-1}h2{font-size:15px;color:var(--c);letter-spacing:2px;text-transform:uppercase;margin:0 0 12px}.muted,small{color:var(--m)}.big{font-size:30px;font-weight:900}.row{display:flex;justify-content:space-between;gap:10px;align-items:center}.bar{height:8px;background:#26374b;border-radius:8px;margin:10px 0}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--c),var(--v));width:0}button{background:#102943;border:1px solid #31516b;color:white;padding:9px 12px;border-radius:8px;margin:4px;cursor:pointer}button:disabled{opacity:.4}.quest,.mem{padding:11px 0;border-top:1px solid var(--l)}.status{background:#0a2029;padding:10px;border-radius:8px;color:var(--g);margin:8px 0}.warn{background:#2b2115;color:#ffd19b}input,textarea,select{background:#08111d;color:white;border:1px solid var(--l);padding:10px;border-radius:8px;width:100%;margin:5px 0 10px}textarea{min-height:80px}#map{height:240px;background:#101d2d;border:1px solid var(--l);border-radius:10px;overflow:hidden}#map iframe{width:100%;height:100%;border:0}img{max-width:100%;max-height:170px;border-radius:8px}@media(max-width:680px){.grid{grid-template-columns:1fr}.wide{grid-column:auto}}#hunterGateway {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  z-index: 10000;
+  background: #060910;
+}
+
+#campaignApp[hidden],
+#hunterGateway[hidden] {
+  display: none !important;
+}
+
+#returnGateway {
+  position: fixed;
+  right: 14px;
+  top: 12px;
+  z-index: 9999;
+  background: #102943;
+  border: 1px solid #50e6ff;
+  color: #eaf5ff;
+  padding: 10px 13px;
+  border-radius: 9px;
+  font-weight: 700;
+}
+</style></head><body>
+<iframe id="hunterGateway" title="SOLO RIDER Hunter Gateway" src="gateway-preview.html"></iframe>
+<div id="campaignApp" hidden>
+<button id="returnGateway" type="button">← HUNTER GATEWAY</button>
+<header>SOLO RIDER // CYBER HUNTER v2.0</header><main>
 <section class="hero"><div class="k">HUNTER SYSTEM · FIELD INTERFACE</div><h1>THE THREE<br>SANCTUMS</h1><p>One rider. Three Jyotirlingas. Five days. Vashi → Trimbakeshwar → Bhimashankar → Grishneshwar → Vashi.</p><b>03–07 DECEMBER 2026 · SOLO HUNTER · E-RANK</b></section>
 <div class="grid">
 <section class="card"><h2>Hunter status</h2><div class="row"><div><small>RANK</small><div class="big" id="rank">E-RANK</div></div><div><small>RIDER XP</small><div class="big" id="xp">0</div></div></div><div class="bar"><i id="xpbar"></i></div><small id="next">300 XP to D-Rank</small><p>Faith <b id="faith">20</b> · Curse <b id="curse">80</b></p><p>Strength 10 · Agility 10 · Endurance 10</p></section>
@@ -19,7 +49,7 @@
 <div class="quest"><b>Day 4 · Sun 6 Dec</b><br><small>Pune → Ahilyanagar → Chhatrapati Sambhajinagar → Verul/Grishneshwar → Ellora · 230–260 km plus detours</small></div>
 <div class="quest"><b>Day 5 · Mon 7 Dec</b><br><small>Sambhajinagar → Ahilyanagar → Pune corridor → Mumbai → Vashi · 330–370 km. Stop overnight if tired.</small></div>
 <div class="status warn">Distances are estimates, not turn-by-turn directions. Verify road access, two-wheeler restrictions, temple timings, Ellora closure and weather. No night ghat rides. Never force Day 5 when fatigued.</div></section>
-</div><footer><small>Original dark-fantasy game interface. Campaign memories and progress remain local to this browser.</small></footer></main>
+</div><footer><small>Original dark-fantasy game interface. Campaign memories and progress remain local to this browser.</small></footer></main></div>
 <script>
 const OLD='soloRiderThreeSanctums_v1',KEY='soloRiderCyberHunter_v2';
 const tasks=[['Vehicle inspection','Pre-trip',40],['30–50 km test ride','Pre-trip',50],['Departure Gate','Day 1',50],['Kasara Pass','Day 1',40],['Pandavleni Caves · optional','Day 1',80],['Panchavati / Sita Gufa · optional','Day 1',50],['Trimbakeshwar Darshan · MAIN','Day 1',100],['Brahmagiri Trail · optional','Day 1',120],['Long Road Trial','Day 2',60],['Ghat Discipline','Day 2',50],['Bhimashankar Darshan · MAIN','Day 2',150],['Forest Explorer · permitted paths','Day 2',70],['Safe Descent','Day 3',60],['Shaniwar Wada · optional','Day 3',150],['Hunter Recovery','Day 3',30],['Deccan Road','Day 4',70],['Daulatabad Fort · optional','Day 4',120],['Grishneshwar Darshan · MAIN','Day 4',150],['Ellora Cave 16 · BONUS','Day 4',150],['Final Highway','Day 5',80],['Return to Vashi','Day 5',50]];
@@ -44,5 +74,22 @@ function delMem(i){s.mem.splice(i,1);save();render()}function esc(x){return Stri
 let audio=false,ac;function audioToggle(){audio=!audio;document.querySelector('#audioBtn').textContent=audio?'Disable audio':'Enable audio';document.querySelector('#audioState').textContent=audio?'Audio enabled':'Audio off';if(audio)tone(500)}
 function tone(f){if(!audio&&f!==660)return;try{ac=ac||new(window.AudioContext||window.webkitAudioContext)();let o=ac.createOscillator(),g=ac.createGain();o.frequency.value=f;o.connect(g);g.connect(ac.destination);g.gain.setValueAtTime(.07,ac.currentTime);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+.2);o.start();o.stop(ac.currentTime+.2)}catch(e){}}
 if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').then(()=>document.querySelector('#offline').textContent='Offline app shell cached after first load.').catch(()=>document.querySelector('#offline').textContent='Offline cache needs HTTPS hosting.');
-if(s.sos)document.querySelector('#sos').value=s.sos;render();
+if(s.sos)document.querySelector('#sos').value=s.sos;render();window.addEventListener('message', function(event) {
+  if (event.origin !== location.origin) return;
+
+  if (event.data && event.data.type === 'SR_ENTER_CAMPAIGN') {
+    document.getElementById('hunterGateway').hidden = true;
+    document.getElementById('campaignApp').hidden = false;
+  }
+
+  if (event.data && event.data.type === 'SR_OPEN_GATEWAY') {
+    document.getElementById('campaignApp').hidden = true;
+    document.getElementById('hunterGateway').hidden = false;
+  }
+});
+
+document.getElementById('returnGateway').addEventListener('click', function() {
+  document.getElementById('campaignApp').hidden = true;
+  document.getElementById('hunterGateway').hidden = false;
+});
 </script></body></html>
